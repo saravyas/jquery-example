@@ -1,0 +1,12 @@
+<html>
+<input type="text" name="firstname" title="First Name" style="color:#888;" 
+    value="First Name" onfocus="inputFocus(this)" onblur="inputBlur(this)" />
+ <script type="text/javascript">
+ 	function inputFocus(i){
+    if(i.value==i.defaultValue){ i.value=""; i.style.color="#789"; }
+}
+function inputBlur(i){
+    if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
+}
+ </script>
+ </html>

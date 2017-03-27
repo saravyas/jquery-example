@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToDo Application</title>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="jquery-ui.js"></script>
+<style type="text/css">
+	#container
+	{
+		width: 700px;
+		height: 450px;
+		margin: 70px auto;
+		border: 2px solid rgb(125,181,66);
+	}
+	h2{
+		color: rgb(125,181,66);
+		text-align: center;
+	}
+		#container
+	{
+		width: 700px;
+		height: 450px;
+		margin: 0px auto;
+		 
+	} 
+	ol li{
+		border: 1px dotted black;
+		cursor:pointer;
+		padding:5px;
+		margin-bottom: 5px;
+	}
+	ol li:hover{
+		background: #6eb7db;
+	}
+	#btnaddproject{
+		margin-left: 550px;
+		margin-bottom:20px;
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('#projects').tabs();
+		$('ul').sortable({axis:"x",containment:"#projects"});
+		$('ul').sortable({axis:"y",containment:"#projects"});
+		$('#btnaddproject').button().click(function()
+		{
+			$('#project-dialog').dialog({width:400,resizable:false,modal:true,buttons:{
+					"Add New project":function(){
+						var projectName=$('#new-project').val();
+						$("<li><a href='#"+projectName+"''>"+projectName+"</a></li>").appendTo("#main");
+						$('#projects').tabs("refresh");
+												$('#new-project').val("");
+						$(this).dialog("close");
+					},
+					"cancel":function(){
+						$('#new-project').val("");
+						$(this).dialog("close");
+					}
+			}});
+		});
+	});
+</script>
+</head>
+<body>
+<div id="container">
+	<h2>Todo list</h2>
+	<button id="btnaddproject">Add project</button>
+	<div id="projects">
+		<ul id="main">
+			<li><a href="#personal">Personal</a></li>
+					<li><a href="#work">Work</a></li>
+		</ul>
+		<ol id="personal">
+			<li><input type="checkbox" >doctor appointment</li>
+			<li><input type="checkbox" >call vicky</li>
+		</ol>
+				<ol id="work">
+			<li><input type="checkbox" >learn front end</li>
+			<li><input type="checkbox" >learn backend</li>
+		</ol>
+	</div>
+	<div id="project-dialog" title="Add A Project" style="display: none;">
+		<label for="new-project">project Name:</label><input id="new-project" type="text" >
+	</div>
+</div>
+</body>
+</html>

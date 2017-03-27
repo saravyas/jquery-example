@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>toggleclass</title>
+<script src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('p#id1').click(function()
+		{
+			$(this).toggleClass('class1')
+		});
+	});
+</script>
+<style type="text/css">
+	.class1{
+		color:yellow;
+	}
+</style>
+</head>
+<body>
+<p >clickhere</p>
+<p id='id1' class='class1'>saravyas</p>
+</body>
+</html>
+<!-- <html>
+<head>
+<title>The Selecter Example</title>
+<script src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+$("p#pid").click(function () {
+$(this).toggleClass("red");
+});
+});
+</script>
+<style>
+.red { color:red; }
+</style>
+</head>
+<body>
+<p>Click following line to see the result</p>
+<p class="red" id="pid">This is first paragraph.</p>
+</body>
+</html> -->

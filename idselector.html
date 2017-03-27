@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>id selector</title>
+<script src="jquery-3.1.1.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var i;
+	var par=$("#id");
+	for(i=0;i<par.length;i++)
+		alert((i+1)+" element is "+par[i].innerHTML);
+});
+</script>
+</head>
+<body>
+<div>
+	<p id='id1'>sara</p>
+	<p class ='class1'>vyas</p>
+	<p>saravyas</p>
+</div>
+</body>
+</html>

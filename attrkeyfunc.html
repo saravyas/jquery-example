@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>attr key value</title>
+<script src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('table').attr('border',function(sarr)
+		{
+			return (sarr+1);
+		})
+	});
+</script>
+</head>
+<body>
+<table><tr><td>sara</td></tr></table>
+<table><tr><td>vyas</td></tr></table>
+<table><tr><td>saravyas</td></tr></table>
+<table><tr><td>malar</td></tr></table>
+</body>
+</html>

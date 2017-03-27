@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tag selection</title>
+</head>
+<body>
+<script src="jquery-3.1.1.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	$('div').css("background-color","yellow");
+	$('.class2').css("background-color","red");
+	$('*').css("letter-spacing",".4em");
+	$("p>*").css("font-size","100px");
+});
+</script> 
+<div class="class1" id="id1">sara</div>
+</br>
+<div class="class2" id="id2">vyas</div>
+</br>
+<div class="class3" id="id3">saravyas</div>
+<p id=id4>vicky</p>
+<p id=class4><strong id=id5>vino</strong></p>
+</body>
+</html>

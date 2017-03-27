@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>find element by index</title>
+	<script src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('li').eq(0).addClass('class0');
+			$('li').eq(1).addClass('class1');
+			$('li').eq(2).addClass('class2');
+			$('li').eq(3).addClass('class3');
+			$('li').eq(4).addClass('class4');
+			$('li').eq(5).addClass('class5');						
+		});
+	</script>
+	<style type="text/css">
+		.class0{
+			color:yellow;
+			font-size:50px; 
+			font-weight: normal;
+			letter-spacing: .1em;
+			margin-bottom: 1em;
+			text-transform: lowercase;
+		}
+		.class1{
+			color:green;
+			font-size:20px;
+		}
+		.class2{
+			color:blue;
+			font-size:30px;			
+		}
+		.class3{
+			color:pink;
+			font-size:40px;
+		}
+		.class4{
+			color:red;
+			font-size:50px;
+		}
+		.class5{
+			color:violet;
+			font-size:60px;
+		}				
+	</style>
+</head>
+<body>
+<ol>
+	<li>sara</li>
+	<li>malar</li>
+	<li>shyam</li>
+	<li>vino</li>
+	<li>vicky</li>
+	<li>gomal</li>
+</ol>
+</body>
+</html>

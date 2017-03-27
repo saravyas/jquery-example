@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>attribute value</title>
+<script src="jquery-3.1.1.min.js">	
+</script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		var news= $('em').attr('title');
+		$('#id1').text(news);
+	});
+</script>
+</head>
+<body>
+	<div>
+		<em title="saravyas">i love sara</em>
+		<p id="id1">it's all fate</p>
+		<p class="class2">love is life</p>
+		<p class="class1"></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>The jQuery Example</title>
+<script src="jquery-3.1.1.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#button1').css('background-color','yellow')
+$('#button1').css('font-size',12)
+$('#button1').click(function()
+{
+	alert("sara");
+});
+if($('#button2').length >0)
+{
+	alert('element  avail');
+}
+else
+{
+	alert('element not avail');
+}
+//document.write("Hello, World!");
+});
+</script>
+</head>
+<body>
+<input type="button" value="sara" id="button1">
+</body>
+</html>

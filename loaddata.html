@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loading data</title>
+<script src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+					$('p').hide();
+		$('#id1').css('color','yellow');
+		$('#id1').click(function (event) {
+			$('#div1').load('/jquery/idselector.html');
+			$(this).hide();
+		});
+	});
+</script>
+</head>
+<body>
+<p>click the button</p>
+<div id="div1" >below</div>
+<input type="button" name="load" id="id1" value="load">
+</body>
+</html>
